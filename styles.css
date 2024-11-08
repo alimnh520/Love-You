@@ -1,0 +1,157 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(#4c0c0c, #000);
+}
+.container{
+  position: relative;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0005)
+}
+.heart{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heart::before{
+  content: "";
+  position: absolute;
+  right: 110px;
+  width: 140px;
+  height: 225px;
+  background: #f00;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  rotate: 315deg;
+  animation: heart 2s steps(1) infinite;
+  z-index: 100;
+}
+.heart::after {
+  content: "";
+  position: absolute;
+  left: 110px;
+  width: 140px;
+  height: 225px;
+  background: #f00;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  rotate: 45deg;
+  animation: heart 2s steps(1) infinite;
+  z-index: 100;
+}
+@keyframes heart{
+  0%,40%,50%,60%,100%{
+    filter: none;
+  }
+  45%,55%{
+    filter: drop-shadow(0 0 50px #f00) drop-shadow(0 0 150px #f00);
+  }
+}
+
+.drop{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(5px 5px 10px #000) drop-shadow(0 0 10px #f00);
+  animation: animate 4s forwards linear;
+  transform-origin: bottom;
+  
+}
+.drop::before{
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 30px;
+  background: #f00;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 10000;
+  transform-origin: bottom center;
+  rotate: -45deg;
+}
+
+.drop::after {
+  position: absolute;
+  content: "";
+  bottom: 3px;
+  right: 1px;
+  width: 30px;
+  height: 20px;
+  background: #f00;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 10000;
+  transform-origin: bottom center;
+  rotate: 315deg;
+}
+
+@keyframes animate {
+  0%{ 
+    top: 80px;
+    opacity: 1;
+    scale: 1;
+  }
+  70%{
+    top: 340px;
+    opacity: 1;
+  }
+  80%{
+    top: 340px;
+  }
+  100%{
+    top: 340px;
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+.text {
+    text-align: center;
+    
+}
+
+.line {
+    display: inline-block;
+    font-size: 50px;
+    font-family: "Sour Gummy", sans-serif;
+    font-weight: bold;
+    color: #f00;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 10px 0;
+    filter: drop-shadow(0 0 10px #f00);
+}
+
+.line span {
+    display: inline-block;
+    transform: scale(3);
+    opacity: 0;
+    animation: shrink 0.5s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(3);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
