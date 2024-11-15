@@ -145,6 +145,9 @@ body{
     animation: shrink 0.5s ease forwards;
     animation-delay: calc(0.1s * var(--i));
 }
+.line span:nth-child(){
+  margin-right: 5px;
+}
 
 @keyframes shrink {
     0% {
