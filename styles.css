@@ -20,6 +20,26 @@ body{
   border-bottom: 1px solid rgba(255,255,255,0.1);
   -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0005)
 }
+.topics{
+  position: absolute;
+  top: 50px;
+  font-size: 30px;
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: bold;
+  color: #f00;
+  filter: drop-shadow(0 0 10px #f00);
+}
+.heart .date{
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 2px 2px #4F0000;
+  color: #9B0000;
+  z-index: 1000;
+  position: absolute;
+  animation: heart 2s steps(1) infinite;
+}
+
 .heart{
   position: relative;
   width: 300px;
