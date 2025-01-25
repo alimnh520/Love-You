@@ -20,8 +20,8 @@ setInterval(() => {
 
 
 
-const helloText = "FUCK";
-const nameText = "YOU";
+const helloText = "I♡Love♡You";
+const nameText = "Lamiya";
 
 // Function to animate text with a delay
 function animateText(text, containerId, delay = 0) {
