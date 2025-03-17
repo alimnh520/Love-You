@@ -21,7 +21,7 @@ setInterval(() => {
 
 
 const helloText = "I♡Love♡You";
-const nameText = "Tahmina";
+const nameText = "Kashfiya";
 
 // Function to animate text with a delay
 function animateText(text, containerId, delay = 0) {
